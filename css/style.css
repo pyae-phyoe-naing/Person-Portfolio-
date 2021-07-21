@@ -9,7 +9,7 @@ body {
     margin: 0;
     line-height: 1.5;
     font-size: 16px;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
 
@@ -26,7 +26,9 @@ body {
 ::after {
     box-sizing: border-box;
 }
-
+input,textarea,select{
+    font-family: 'Montserrat', sans-serif;
+}
 /* width */
 ::-webkit-scrollbar {
     width: 13px;
@@ -129,6 +131,8 @@ body {
     transition: all 0.3s ease;
     display: inline-block;
     white-space: nowrap;
+    border:none;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -649,37 +653,44 @@ body {
     max-width: 33.33%;
     margin-bottom: 30px;
 }
+
 .portfolio .portfolio-item.hide {
-   display: none;
+    display: none;
 }
+
 .portfolio .portfolio-item.show {
     display: block;
     animation: showItem .5s ease;
- }
- @-webkit-keyframes showItem{
-    0%{
-      -webkit-transform: scale(0.8);
-       transform: scale(0.8);
-       opacity: 0;
-    }
-    100%{
-       -webkit-transform: scale(1);
-       transform: scale(1);
-       opacity: 1;
-    }
 }
- @keyframes showItem{
-     0%{
-       -webkit-transform: scale(0.8);
+
+@-webkit-keyframes showItem {
+    0% {
+        -webkit-transform: scale(0.8);
         transform: scale(0.8);
         opacity: 0;
-     }
-     100%{
+    }
+
+    100% {
         -webkit-transform: scale(1);
         transform: scale(1);
         opacity: 1;
-     }
- }
+    }
+}
+
+@keyframes showItem {
+    0% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 .portfolio .portfolio-item-inner {
     border: 6px solid #fdf9ff;
     border-radius: 10px;
@@ -772,39 +783,47 @@ body {
     cursor: zoom-out;
     padding: 30px;
 }
-.lightbox.open{
-     display: -ms-flexbox;
+
+.lightbox.open {
+    display: -ms-flexbox;
     display: flex;
 }
+
 .lightbox .lightbox-content {
     position: relative;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    
+
 }
-.lightbox.open .lightbox-content{
-      animation: lightImage .5s ease ;
- }
- @-webkit-keyframes lightImage{
-    0%{
-       -webkit-transform: scale(0.8);
-        transform:scale(0.8);
-    }
-    100%{
-       -webkit-transform: scale(1);
-       transform:scale(1);
-    }
+
+.lightbox.open .lightbox-content {
+    animation: lightImage .5s ease;
 }
- @keyframes lightImage{
-     0%{
+
+@-webkit-keyframes lightImage {
+    0% {
         -webkit-transform: scale(0.8);
-         transform:scale(0.8);
-     }
-     100%{
+        transform: scale(0.8);
+    }
+
+    100% {
         -webkit-transform: scale(1);
-        transform:scale(1);
-     }
- }
+        transform: scale(1);
+    }
+}
+
+@keyframes lightImage {
+    0% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
 .lightbox .lightbox-content img {
     height: auto;
     width: auto;
@@ -812,14 +831,14 @@ body {
     max-height: 500px;
     cursor: pointer;
     display: block;
-    padding:40px 0 30px;
+    padding: 40px 0 30px;
 }
 
 .lightbox .lightbox-content .lightbox-close {
     position: absolute;
     height: 40px;
     width: 40px;
-    top:0px;
+    top: 0px;
     right: 0;
     font-size: 32px;
     text-align: right;
@@ -854,91 +873,108 @@ body {
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
-    top:50%;
+    top: 50%;
     margin-top: -20px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     z-index: 110;
 }
+
 .lightbox .lightbox-controls .prev-item:hover,
 .lightbox .lightbox-controls .next-item:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
+
 .lightbox .lightbox-controls .prev-item:active,
 .lightbox .lightbox-controls .next-item:active {
     -webkit-transform: scale(1);
     transform: scale(1);
 }
+
 .lightbox .lightbox-controls .prev-item {
-    left:30px;
+    left: 30px;
 }
+
 .lightbox .lightbox-controls .next-item {
-    right:30px;
+    right: 30px;
 }
+
 .lightbox .lightbox-controls .prev-item .uil,
-.lightbox .lightbox-controls .next-item .uil{
+.lightbox .lightbox-controls .next-item .uil {
     font-size: 32px;
     line-height: 40px;
 }
+
 /* Blog Section */
-.blog .container{
+.blog .container {
     margin-bottom: 40px;
 }
-.blog .blog-item{
+
+.blog .blog-item {
     /* background-color: pink; */
-    flex:0 0 33.33%;
+    -ms-flex: 0 0 33.33%;
+    flex: 0 0 33.33%;
     max-width: 33.33%;
     margin-bottom: 30px;
 }
-.blog .blog-item-inner{
+
+.blog .blog-item-inner {
     border-radius: 10px;
     overflow: hidden;
-    border:1px solid #d4d4e3;
+    border: 1px solid #d4d4e3;
 }
+
 .blog .blog-item-inner .blog-img {
     position: relative;
     overflow: hidden;
 }
-.blog .blog-item-inner .blog-img img{
+
+.blog .blog-item-inner .blog-img img {
     width: 100%;
     display: block;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-.blog .blog-item-inner:hover .blog-img img{
+
+.blog .blog-item-inner:hover .blog-img img {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
-.blog .blog-item-inner .blog-img .blog-date{
+
+.blog .blog-item-inner .blog-img .blog-date {
     position: absolute;
     padding: 4px 10px;
-    border-radius:5px ;
-    color:#ffffff;
+    border-radius: 5px;
+    color: #ffffff;
     font-weight: 600;
     font-size: 14px;
-    left:15px;
+    left: 15px;
     bottom: 15px;
 }
-.blog .blog-item-inner .blog-info{
-   padding: 30px 15px;
-   background-color: #fdf9ff;
+
+.blog .blog-item-inner .blog-info {
+    padding: 30px 15px;
+    background-color: #fdf9ff;
 }
-.blog .blog-item-inner .blog-info .blog-title{
-   font-size: 18px;
-   font-weight: 700;
-   color:#302e4d;
-   text-transform: capitalize;
-   margin-bottom: 10px;
+
+.blog .blog-item-inner .blog-info .blog-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #302e4d;
+    text-transform: capitalize;
+    margin-bottom: 10px;
 }
-.blog .blog-item-inner .blog-info .blog-description{
+
+.blog .blog-item-inner .blog-info .blog-description {
     font-size: 16px;
     line-height: 25px;
     font-weight: 400;
     color: #504e50;
     margin-bottom: 15px;
 }
-.blog .blog-item-inner .blog-info .blog-tags{
+
+.blog .blog-item-inner .blog-info .blog-tags {
     font-size: 14px;
     line-height: 25px;
     font-weight: 400;
@@ -946,7 +982,80 @@ body {
     margin-bottom: 15px;
     text-transform: capitalize;
 }
-.blog .blog-item-inner .blog-info .blog-tags a{
+
+.blog .blog-item-inner .blog-info .blog-tags a {
     text-decoration: none;
     font-weight: 600;
 }
+
+/* Contact Section */
+.contact .contact-info-item {
+    /* background-color: #504e50; */
+    -ms-flex: 0 0 33.33%;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact .contact-info-item .icon{
+    display: inline-block;
+}
+.contact .contact-info-item .icon .uil{
+    font-size: 40px;
+}
+.contact .contact-info-item h4{
+    font-size: 18px;
+    font-weight: 700;
+    color: #302e4d;
+    text-transform: capitalize;
+    margin: 15px 0 5px;
+}
+.contact .contact-info-item p{
+    font-size: 16px;
+    margin: 0;
+    font-weight: 400;
+    line-height: 25px;
+    color: #504e70;
+}
+.contact .contact-form{
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.contact .contact-form .col-6{
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.contact .contact-form .col-12{
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.contact .contact-form .form-item{
+    margin-bottom: 30px;
+}
+.contact .contact-form .form-item .form-control{
+    width: 100%;
+    height: 50px;
+    border-radius: 7px;
+    border: 1px solid #d4d4e3;
+    padding: 10px 25px;
+    font-style: 16px;
+    color: #504e70;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.contact .contact-form .form-item .form-control:focus{
+    -webkit-box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+.contact .contact-form .form-item textarea.form-control{
+    height: 140px;
+}
+.contact .contact-form .btn{
+    height: 50px;
+    padding: 0 50px;
+}
+

@@ -14,7 +14,8 @@
  .portfolio .portfolio-item .portfolio-info .icon .uil,
  .lightbox .lightbox-controls .prev-item .uil,
 .lightbox .lightbox-controls .next-item .uil,
-.blog .blog-item-inner .blog-info .blog-tags a{
+.blog .blog-item-inner .blog-info .blog-tags a,
+.contact .contact-info-item .icon .uil{
     color:#ec1839;
  }
  .btn,
