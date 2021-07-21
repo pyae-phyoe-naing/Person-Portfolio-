@@ -9,7 +9,11 @@
  .aside .nav li a:hover,
  .aside .nav li a.active,
  .about .about-content .about-text h3 span,
- .service .service-item .service-item-inner .icon{
+ .service .service-item .service-item-inner .icon,
+ .portfolio .portfolio-filter button.active,
+ .portfolio .portfolio-item .portfolio-info .icon .uil,
+ .lightbox .lightbox-controls .prev-item .uil,
+.lightbox .lightbox-controls .next-item .uil{
     color:#ec1839;
  }
  .btn,
@@ -26,4 +30,8 @@
  .service .service-item .service-item-inner:hover .icon
  {
    background-color: #ec1839;
+}
+
+.portfolio .portfolio-filter button.active{
+   border-color: #ec1839;
 }
