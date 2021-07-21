@@ -13,7 +13,8 @@
  .portfolio .portfolio-filter button.active,
  .portfolio .portfolio-item .portfolio-info .icon .uil,
  .lightbox .lightbox-controls .prev-item .uil,
-.lightbox .lightbox-controls .next-item .uil{
+.lightbox .lightbox-controls .next-item .uil,
+.blog .blog-item-inner .blog-info .blog-tags a{
     color:#ec1839;
  }
  .btn,
@@ -26,7 +27,7 @@
  .about .about-content .skills .skill-item .progress .progress-in,
  .about .about-content .timeline .timeline-item::before,
  .about .about-content .timeline .circle-dot,
-
+ .blog .blog-item-inner .blog-img .blog-date,
  .service .service-item .service-item-inner:hover .icon
  {
    background-color: #ec1839;
