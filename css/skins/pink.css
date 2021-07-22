@@ -8,9 +8,12 @@
  }
  .aside .nav li a:hover,
  .aside .nav li a.active,
+ body.dark .aside .nav li a:hover,
+ body.dark .aside .nav li a.active,
  .about .about-content .about-text h3 span,
  .service .service-item .service-item-inner .icon,
  .portfolio .portfolio-filter button.active,
+ body.dark .portfolio .portfolio-filter button.active,
  .portfolio .portfolio-item .portfolio-info .icon .uil,
  .lightbox .lightbox-controls .prev-item .uil,
 .lightbox .lightbox-controls .next-item .uil,
@@ -19,6 +22,7 @@
     color:#ec1839;
  }
  .btn,
+ ::-webkit-scrollbar-thumb,
  .aside .nav-toggler span,
  .aside .nav-toggler span::after,
  .aside .nav-toggler span::before,
@@ -33,7 +37,10 @@
  {
    background-color: #ec1839;
 }
-
+body.dark .home .intro img{
+   border:1px solid #ec1839;
+}
+body.dark .portfolio .portfolio-filter button.active,
 .portfolio .portfolio-filter button.active{
    border-color: #ec1839;
 }
